@@ -34,7 +34,7 @@ module "artifact_registry" {
 }
 ```
 
-`With labels`:
+`Complete`:
 
 ```hcl
 module "artifact_registry" {
