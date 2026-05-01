@@ -9,6 +9,6 @@ output "name" {
 }
 
 output "repository_url" {
-  description = "Docker-compatible pull URL for the repository."
-  value       = "${var.location}-docker.pkg.dev/${var.project_id}/${var.repository_id}"
+  description = "Pull URL for the repository (e.g. us-central1-docker.pkg.dev/my-project/my-repo)."
+  value       = "${var.location}-${lower(var.format)}.pkg.dev/${var.project_id}/${var.repository_id}"
 }

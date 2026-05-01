@@ -10,8 +10,7 @@ This Terraform module provisions a GCP Artifact Registry repository using `googl
 
 ```hcl
 module "artifact_registry" {
-  source  = "nurdsoft/artifact-registry/google"
-  version = "~> 0.1"
+  source = "git::https://github.com/nurdsoft/terraform-google-artifact-registry.git?ref=v0.1.0"
 
   project_id    = "my-gcp-project"
   location      = "us-central1"
@@ -25,8 +24,7 @@ module "artifact_registry" {
 
 ```hcl
 module "artifact_registry" {
-  source  = "nurdsoft/artifact-registry/google"
-  version = "~> 0.1"
+  source = "git::https://github.com/nurdsoft/terraform-google-artifact-registry.git?ref=v0.1.0"
 
   project_id    = "my-gcp-project"
   location      = "us-central1"
@@ -40,8 +38,7 @@ module "artifact_registry" {
 
 ```hcl
 module "artifact_registry" {
-  source  = "nurdsoft/artifact-registry/google"
-  version = "~> 0.1"
+  source = "git::https://github.com/nurdsoft/terraform-google-artifact-registry.git?ref=v0.1.0"
 
   project_id    = "my-gcp-project"
   location      = "us-central1"

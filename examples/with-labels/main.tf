@@ -12,5 +12,6 @@ module "artifact_registry" {
     team = "platform"
   }
 
+  # false = cleanup policies are actively enforced (deletions will occur)
   cleanup_policy_dry_run = false
 }
