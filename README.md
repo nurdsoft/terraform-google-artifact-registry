@@ -141,7 +141,7 @@ $ git push --set-upstream origin feat/abc
 |------|-------------|
 | repository\_id | The repository ID |
 | name | Full resource name of the repository |
-| repository\_url | Docker-compatible pull URL (e.g. `us-central1-docker.pkg.dev/my-project/my-repo`) |
+| repository\_url | Pull URL for the repository (e.g. `us-central1-docker.pkg.dev/my-project/my-repo`) |
 
 ## Authors
 

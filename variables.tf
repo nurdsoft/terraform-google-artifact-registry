@@ -13,8 +13,8 @@ variable "repository_id" {
   type        = string
 
   validation {
-    condition     = can(regex("^[a-z0-9]([a-z0-9-]*[a-z0-9])?$", var.repository_id)) && length(var.repository_id) <= 63
-    error_message = "repository_id must be 1-63 characters, start and end with a lowercase letter or number, and contain only lowercase letters, numbers, and hyphens."
+    condition     = can(regex("^[a-z0-9][a-z0-9-]*[a-z0-9]$", var.repository_id)) && length(var.repository_id) <= 63
+    error_message = "repository_id must be 2-63 characters, start and end with a lowercase letter or number, and contain only lowercase letters, numbers, and hyphens."
   }
 }
 
