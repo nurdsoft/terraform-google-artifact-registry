@@ -34,6 +34,20 @@ module "artifact_registry" {
 }
 ```
 
+`With immutable tags (DOCKER)`:
+
+```hcl
+module "artifact_registry" {
+  source = "git::https://github.com/nurdsoft/terraform-google-artifact-registry.git?ref=v0.2.0"
+
+  project_id     = "my-gcp-project"
+  location       = "us-central1"
+  repository_id  = "my-docker-repo"
+  format         = "DOCKER"
+  immutable_tags = true
+}
+```
+
 `Complete`:
 
 ```hcl
@@ -134,6 +148,7 @@ $ git push --set-upstream origin feat/abc
 | labels | Labels to apply to the repository | `map(string)` | `{}` | no |
 | kms\_key\_name | Cloud KMS key name for CMEK encryption | `string` | `null` | no |
 | cleanup\_policy\_dry\_run | Whether cleanup policies run in dry-run mode (`null` omits the field) | `bool` | `null` | no |
+| immutable\_tags | Enable/disable immutable tags for `DOCKER` repositories (sets `docker_config.immutable_tags`). `null` omits the block, preserving the existing behaviour | `bool` | `null` | no |
 
 ## Outputs
 
