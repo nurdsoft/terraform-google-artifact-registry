@@ -46,3 +46,9 @@ variable "cleanup_policy_dry_run" {
   type        = bool
   default     = null
 }
+
+variable "immutable_tags" {
+  description = "Enable or disable immutable tags for DOCKER repositories (sets docker_config.immutable_tags). Set to null (default) to omit the docker_config block entirely."
+  type        = bool
+  default     = null
+}
